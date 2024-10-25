@@ -1,7 +1,8 @@
 import {ethers} from "hardhat";
 
 async function main() {
-  const vrfRequestInfo = await ethers.deployContract("VRFRequestInfo"); // adding {gasLimit: 200000}); works
+  const vrfRequestInfo = await ethers.deployContract("VRFRequestInfo");
+  //  const vrfRequestInfo = await ethers.deployContract("VRFRequestInfo", {gasLimit: 200000}); // works
   await vrfRequestInfo.waitForDeployment();
 }
 
