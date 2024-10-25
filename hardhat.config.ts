@@ -32,8 +32,16 @@ const config: HardhatUserConfig = {
       initialBaseFeePerGas: 0,
       allowUnlimitedContractSize: true,
     },
+    fantom: {
+      url: process.env.FANTOM_RPC,
+      accounts: [process.env.PRIVATE_KEY as string],
+    },
     sonic_testnet: {
       url: process.env.SONIC_TESTNET_RPC,
+      accounts: [process.env.PRIVATE_KEY as string],
+    },
+    arbitrum: {
+      url: process.env.ARBITRUM_RPC,
       accounts: [process.env.PRIVATE_KEY as string],
     },
   },
